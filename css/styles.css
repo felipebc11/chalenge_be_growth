@@ -201,17 +201,18 @@
 		margin-left: 7%;
 	}
 	.titleandparagraph {
+		margin-top: 20%;
 		margin-left: 20%;
 		text-align: center;
 		max-width: 80%;
 	}
 	
 	.titleandparagraph h1 {
-		
+		font-size: 20px;
 		text-decoration: none;
 	}
 	.titleandparagraph span {
-		
+		font-size: 10px;
 		text-align: right;
 	}
 
