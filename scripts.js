@@ -195,11 +195,11 @@ methods: {
 new Vue({
 	el:"#header",
 	template: `
-	<div style="
+	<div class="navbar-links" style="
 				width: 100%;
         position: absolute;
 				top: 0; 
-        margin-left: 8%; 
+        
 				">
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
