@@ -199,7 +199,7 @@
 		margin-left: 7%;
 	}
 	.titleandparagraph {
-		margin-left: 15%;
+		margin-left: 20%;
 		text-align: center;
 		max-width: 80%;
 	}
@@ -212,12 +212,11 @@
 		
 		text-align: right;
 	}
-	
 
-	.pt-4 .my-md-5 .pt-md-5 .border-top{
-		
-		margin-left: 7%;
+	.row {
+		margin-left: 20%;
 	}
+	
 }
 
   
