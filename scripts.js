@@ -203,7 +203,7 @@ methods: {
 new Vue({
 	el:"#header",
 	template: `
-	<div class="navbar-links" style="
+	  <div class="navbar-links" style="
 				width: 100%;
         position: absolute;
 				top: 0; 
@@ -211,53 +211,52 @@ new Vue({
 				">
 
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Link Úteis</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Cartão de crédito <span class="sr-only">(Página atual)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Empréstimos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Financiamentos</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Renda Extra</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-	</div>
-	
+      <a class="navbar-brand" href="#">Link Úteis</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Cartão de crédito <span class="sr-only">(Página atual)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Empréstimos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Financiamentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Renda Extra</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+	</div>	
 	`
 });
 
 new Vue({
 	el:"#footer",
-	template: `<footer style="
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;"
-     
-  class="pt-4 my-md-5 pt-md-5 border-top">
-    <div class="row">
-      <div class="col-md-1  text-center">
-          <h3>UTUA</h3>
-      </div>
-        <div class="col-md-3  text-center">
-              Utua · 2020 © Todos os direitos reservados
+	template: `
+    <footer style="
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 2.5rem;"
+      class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-md-1  text-center">
+              <h3>UTUA</h3>
+          </div>
+          <div class="col-md-3  text-center">
+            Utua · 2020 © Todos os direitos reservados
+          </div>
+            <div class="col-md-2  text-center"><a href="https://utua.com.br/politica-de-privacidade/"> Política de privacidade </a> </div>
+            <div class="col-md-2  text-center"><a href="https://utua.com.br/termos-de-uso/"> Termos de Uso  </a></div>
+            <div class="col-md-2  text-center"><a href="https://utua.com.br/quem-somos/"> Sobre nós </a></div>
+            <div class="col-md-2  text-center"><a href="https://utua.com.br/contato/"> Contato </a></div>
         </div>
-        <div class="col-md-2  text-center"><a href="https://utua.com.br/politica-de-privacidade/"> Política de privacidade </a> </div>
-        <div class="col-md-2  text-center"><a href="https://utua.com.br/termos-de-uso/"> Termos de Uso  </a></div>
-        <div class="col-md-2  text-center"><a href="https://utua.com.br/quem-somos/"> Sobre nós </a></div>
-        <div class="col-md-2  text-center"><a href="https://utua.com.br/contato/"> Contato </a></div>
-      </div>
   </footer>`
 });
 
