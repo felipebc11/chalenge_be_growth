@@ -37,110 +37,118 @@ template: `
 <div>
 
   <section class="container">
-  
+
     <div class="titleandparagraph">
       <h1>Descubra qual é o cartão de crédito ideal para você!</h1>
-      <span>Responda às perguntas abaixo para que nossa tecnologia possa escolher o melhor cartão de crédito para você.</span>
+      <span>Responda às perguntas abaixo para que nossa tecnologia possa escolher o melhor cartão de crédito para
+        você.</span>
     </div>
-    
+
 
     <!--questionBox-->
     <div class="questionBox">
-  
-      <!-- transition -->
-        <transition-group name="list" tag="p">
 
-  
+      <!-- transition -->
+      <transition-group name="list" tag="p">
+
+
         <!--qusetionContainer-->
         <div class="questionContainer" v-if="questionIndex<quiz.questions.length" v-bind:key="questionIndex">
-  
+
           <header>
             <h1 class="title is-6">UTUA</h1>
             <!--progress-->
             <div class="progressContainer">
-              <progress class="progress is-info is-small" :value="parseInt((questionIndex/quiz.questions.length)*100)" max="100">{{parseInt((questionIndex/quiz.questions.length)*100)}}%</progress>
+              <progress class="progress is-info is-small" :value="parseInt((questionIndex/quiz.questions.length)*100)"
+                max="100">{{parseInt((questionIndex/quiz.questions.length)*100)}}%</progress>
               <p>{{parseInt((questionIndex/quiz.questions.length)*100)}}% completo</p>
             </div>
             <!--/progress-->
           </header>
-  
+
           <!-- questionTitle -->
           <h2 class="titleContainer title">{{ quiz.questions[questionIndex].text }}</h2>
-  
+
           <!-- quizOptions -->
           <div class="optionContainer">
-            <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses" @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}" :key="index">
+            <div class="option" v-for="(response, index) in quiz.questions[questionIndex].responses"
+              @click="selectOption(index)" :class="{ 'is-selected': userResponses[questionIndex] == index}"
+              :key="index">
               {{ index | charIndex }}. {{ response.text }}
             </div>
           </div>
-  
+
           <!--quizFooter: navigation and progress-->
           <footer class="questionFooter">
-  
+
             <!--pagination-->
             <nav class="pagination" role="navigation" aria-label="pagination">
-  
+
               <!-- back button -->
               <a class="button" v-on:click="prev();" :disabled="questionIndex < 1">
-                      Voltar
-                    </a>
-  
+                Voltar
+              </a>
+
               <!-- next button -->
-              <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();" :disabled="questionIndex>=quiz.questions.length">
-                      {{ (userResponses[questionIndex]==null)?'Próxima':'Próxima' }}
-                    </a>
-  
+              <a class="button" :class="(userResponses[questionIndex]==null)?'':'is-active'" v-on:click="next();"
+                :disabled="questionIndex>=quiz.questions.length">
+                {{ (userResponses[questionIndex]==null)?'Próxima':'Próxima' }}
+              </a>
+
             </nav>
             <!--/pagination-->
-  
+
           </footer>
           <!--/quizFooter-->
-  
+
         </div>
         <!--/questionContainer-->
-  
+
         <!--quizCompletedResult-->
-        <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex" class="quizCompleted has-text-centered">
-  
+        <div v-if="questionIndex >= quiz.questions.length" v-bind:key="questionIndex"
+          class="quizCompleted has-text-centered">
+
           <img src="assets/img/JD-20-512.png" class="img-fluid"><br>
           <h1 class="MyFont">Falta pouco!</h1>
           <p class="lead">Digite seus dados abaixo e receba o cartão perfeito para você.</p>
           <div class="row justify-content-md-center">
-          <div class="col-md-9" >
-        
-          <div class="form-group">
-              <input type="text" class="form-control"  id="nome_send" aria-describedby="emailHelp" placeholder="Insira seu nome.">
+            <div class="col-md-9">
+
+              <div class="form-group">
+                <input type="text" class="form-control" id="nome_send" aria-describedby="emailHelp"
+                  placeholder="Insira seu nome.">
+              </div>
+
+              <div class="form-group">
+                <input type="email" class="form-control" id="email_send" aria-describedby="emailHelp"
+                  placeholder="Insira seu email.">
+              </div>
+
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="Check1_termos" checked style="display:none;">
+              </div>
+              <br>
+            </div>
+
+            <button onclick="send_info()" class="btn btn-primary btn-sm br">VER MEU CARTÃO DE CRÉDITO</button><br>
+            <label style="max-width:70%;" id="label_check" class="form-check-label" for="exampleCheck1"><a
+                href="https://utua.com.br/politica-de-privacidade/" target="_blank">
+                Ao clicar no botão "ver meu cartao" você concorda com os termos de uso e as politicas de
+                privacidade.</a></label>
+
           </div>
-    
-          <div class="form-group">
-          <input type="email" class="form-control" id="email_send" aria-describedby="emailHelp" placeholder="Insira seu email.">
-          </div>
-    
-          <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="Check1_termos" checked style="display:none;">
-          </div>
-          <br>
-          </div>
-  
-        <button onclick="send_info()" class="btn btn-primary btn-sm br">VER MEU CARTÃO DE CRÉDITO</button><br>
-        <label style="max-width:70%;"  id="label_check" class="form-check-label" for="exampleCheck1"><a href=
-        "https://utua.com.br/politica-de-privacidade/" 
-        target="_blank" >
-        Ao clicar no botão "ver meu cartao" você concorda com os termos de uso e as politicas de privacidade.</a></label>
-  
-        </div>
         </div>
         <!--/quizCompetedResult-->
-  
+
       </transition-group>
-  
+
     </div>
     <!--/questionBox-->
-  
+
   </section>
-  
-  
-  </div>
+
+
+</div>
   <!--/container-->
 `,
 data: {
