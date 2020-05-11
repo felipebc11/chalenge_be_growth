@@ -2,7 +2,7 @@ let quiz = {
   user: "Dave",
   questions: [
      {
-        text: "O que é mais importante para você?",
+        text: "O que você considera mais importante em um cartão de crédito?",
         responses: [
            { text: "Limite de Crédito Alto" },
            { text: "Sem anuidade"},
@@ -19,7 +19,7 @@ let quiz = {
         ]
      },
      {
-        text: "Você esta negativado?",
+        text: "Atualmente você está negativado?",
         responses: [
            { text: "Sim" },
            { text: "Não" }
